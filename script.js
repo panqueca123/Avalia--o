@@ -1,8 +1,6 @@
-import express from 'express';
-const app = express();
-const port = 8000;
-import fs from 'fs';
-import {v4 as uuidv4} from 'uuid';
+import express from 'express'
+import fs from 'fs'
+import { v4 as uuidv4 } from 'uuid';
 
 
 function readFile(filePath) {
@@ -46,3 +44,11 @@ app.post('/logs', (req,res) => {
     });
 })
 
+app.get('/logs/:id', (req, res) => {
+    const id = req.params.id;
+    if (!id) return res.status(404).send('O Id está correto');
+    readFile(logsPath).then(data => {
+        
+
+    })
+})
