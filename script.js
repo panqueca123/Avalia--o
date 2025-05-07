@@ -62,4 +62,4 @@ app.get('/logs/:id', (req, res) => {
     });
 });
 
-app.listen(port,() => console.log('Server startado em porta ${PORT}'));
+app.listen(port,() => console.log(`Servidor iniciado em porta ${PORT}`));
